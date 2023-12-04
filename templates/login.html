@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../static/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../../static/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload"/>
+
+<header id="header">
+    <a href="/" class="title">Groovy Grove Records</a>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/login"  class="active">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div id="wrapper">
+        <section id="main" class="wrapper"/>
+            <div class="inner">
+                <form action="/login" method="POST">
+                    <h1 class="major">Login </h1>
+                    {% if error %}
+                        <div class="alert alert-warning" role="alert">
+                            Incorrect username or password
+                        </div>
+                    {% endif %}
+                    <div class="field half">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" autocomplete="off"/>
+                    </div>
+                    <div class="field half">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" type="password" />
+                    </div>
+                    <ul class="menu">
+                        <li> Create your <a href="/register">Groovy account</a></li>
+                    </ul>
+                    <button type="submit" class="btn btn-success">Log in</button>
+                </form>
+            </div>
+
+
+
+
+</div>
+        <script src="../../static/assets/js/jquery.min.js"></script>
+        <script src="../../static/assets/js/jquery.scrollex.min.js"></script>
+        <script src="../../static/assets/js/jquery.scrolly.min.js"></script>
+        <script src="../../static/assets/js/browser.min.js"></script>
+        <script src="../../static/assets/js/breakpoints.min.js"></script>
+        <script src="../../static/assets/js/util.js"></script>
+        <script src="../../static/assets/js/main.js"></script>

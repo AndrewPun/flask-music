@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../static/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../../static/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload"/>
+
+<header id="header">
+    <a href="/" class="title">Groovy Grove Records</a>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div id="wrapper">
+    <section id="main" class="wrapper"/>
+
+        <div class="inner">
+            <h1 class="major">Login </h1>
+            <form action="/register" method="POST">
+                {% if username_error %}
+                    <div class="alert alert-warning" role="alert">
+                        Username already exists.
+                    </div>
+                    <br>
+                {% elif email_error %}
+                    <div class="alert alert-warning" role="alert">
+                        An account already exists with that email.
+                    </div>
+                    <br>
+                {% endif %}
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-username" id="demo-username" placeholder="Username" required/>
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="password" name="demo-password" id="demo-password" placeholder="Password" />
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-name" id="demo-name" placeholder="First Name" required />
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-last_name" id="demo-last_name" placeholder="Last Name" required />
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="email" name="demo-email" id="demo-email" placeholder="Email" required />
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-streetaddr" id="demo-streetaddr" placeholder="Street Address" required/>
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-city" id="demo-streetaddr" placeholder="City" required/>
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-state" id="demo-state" maxlength="2" placeholder="State" required />
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-zip" id="demo-zip" maxlength="5" placeholder="Zip Code" required/>
+                </div>
+                <br>
+                <div class="col-6 col-12-xsmall">
+                    <input autocomplete="off" type="text" name="demo-Country" id="demo-Country" placeholder="Country" required/>
+                </div>
+                <br>
+                <button autocomplete="off" type="submit" class="btn btn-success">Register</button>
+            </form>
+
+            <ul class="menu">
+                <li> Create your <a href="http://html5up.net">Groovy account</a></li>
+            </ul>
+        </div>
+    <script src="../../static/assets/js/jquery.min.js"></script>
+    <script src="../../static/assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../static/assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../static/../../static/assets/js/browser.min.js"></script>
+    <script src="../../static/assets/js/breakpoints.min.js"></script>
+    <script src="../../static/assets/js/util.js"></script>
+    <script src="../../static/assets/js/main.js"></script>
+</div>
